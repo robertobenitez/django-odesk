@@ -1,0 +1,14 @@
+MANIFEST
+README
+README.md
+LICENSE
+Makefile
+conf.py
+setup.py
+changelog.rst
+full_list.rst
+getting_started.rst
+how_to.rst
+index.rst
+license.rst
+roadmap.rst
