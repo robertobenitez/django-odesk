@@ -6,6 +6,7 @@ Requirements
 ============
 
     * `python-odesk`
+    * `simplejson (Only python 2.5 or older)`
 
 
 Authentication

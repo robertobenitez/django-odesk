@@ -1,15 +1,20 @@
-from distutils.core import setup
+import os
+from setuptools import setup, find_packages
 
 version = __import__('django_odesk').get_version()
+
+readme = open(os.path.join(os.path.dirname(__file__), 'README.rst'))
+README = readme.read()
+readme.close()
 
 setup(name='django-odesk',
       version=version,
       description='oDesk API integration for Django',
-      long_description='',
+      long_description=README,
       author='Oleksiy Solyanyk',
       author_email='solex@odesk.com',
-      packages = ['django_odesk','django_odesk.auth', 'django_odesk.core', 'django_odesk.conf'],
-      install_requires = ['python-odesk>=0.1.2', ],
+      install_requires = ['python-odesk>=0.4.1', ],
+      packages = find_packages(),
       classifiers=['Development Status :: 1 - Alpha',
                    'Environment :: Web Environment',
                    'Intended Audience :: Developers',
@@ -17,4 +22,4 @@ setup(name='django-odesk',
                    'Operating System :: OS Independent',
                    'Programming Language :: Python',
                    'Topic :: Software Development :: Libraries :: Python Modules',
-                   'Topic :: Utilities'],)
+                   'Topic :: Utilities',],)
